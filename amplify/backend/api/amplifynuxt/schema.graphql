@@ -1,0 +1,5 @@
+type Chat @model @auth(rules: [{ allow: owner, operations: [create, delete, update] }]) {
+  id: ID!
+  comment: String!
+  owner: String
+}
